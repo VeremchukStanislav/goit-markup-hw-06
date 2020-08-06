@@ -720,3 +720,15 @@ p {
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
 }
+
+/*Модальное окно*/
+
+.form-on-backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
