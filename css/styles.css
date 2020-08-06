@@ -731,4 +731,34 @@ p {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-form {
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+  padding: 40px;
+  width: 528px;
+  height: 581px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  align-items: center;
+}
+.modal-form-name {
+  margin-bottom: 30px;
+}
+.modal-form-title {
+  margin-bottom: 28px;
+}
+.modal-form-text {
+  margin-bottom: 20px;
+}
+.modal-form-ladel {
+  margin-bottom: 30px;
+}
+.modal-form-accept {
 }
