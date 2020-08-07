@@ -817,6 +817,13 @@ p {
   align-items: center;
   margin-bottom: 30px;
 }
+.modal-form-my-check {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: solid 1px #000000;
+  border-radius: 2px;
+}
 .modal-form-check {
   position: absolute;
   width: 1px;
@@ -826,4 +833,7 @@ p {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+.modal-form-check:checked + .modal-form-span {
+  text-decoration: underline;
 }
