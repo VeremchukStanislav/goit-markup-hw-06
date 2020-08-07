@@ -748,17 +748,82 @@ p {
   background-color: var(--background-color);
   align-items: center;
 }
+.modal-form-text {
+  margin-bottom: 20px;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  width: 448px;
+  height: 120px;
+  resize: none;
+  color: var(--main-color-text);
+}
+.modal-wrapper {
+  position: relative;
+  margin-bottom: 28px;
+}
+.modal-label {
+  position: absolute;
+  left: 0px;
+  color: var(--main-color-text);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-title {
+  padding-top: 11px;
+  padding-right: 16px;
+  padding-bottom: 11px;
+  padding-left: 16px;
+  width: 448px;
+  height: 40px;
+}
+.modal-form-title,
+.modal-form-text {
+  display: block;
+  font-family: var(--main-font);
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: var(--main-color-text);
+}
 .modal-form-name {
   margin-bottom: 30px;
 }
-.modal-form-title {
-  margin-bottom: 28px;
+.modal-form-title:focus + .modal-label,
+.modal-form-title:not(:placeholder-shown) + .modal-label {
+  transform: translateY(-40px);
+  color: var(--accent-color);
 }
-.modal-form-text {
-  margin-bottom: 20px;
+.modal-form-title:focus,
+.modal-form-text:focus {
+  outline: none;
+  border-color: var(--accent-color);
 }
-.modal-form-ladel {
+.modal-form-span {
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--main-color-text);
+}
+.modal-form-span a {
+  color: var(--accent-color);
+}
+.modal-form-label {
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
 }
-.modal-form-accept {
+.modal-form-check {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
