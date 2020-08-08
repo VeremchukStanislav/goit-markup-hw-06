@@ -74,7 +74,7 @@
             Эффективные решения<br />
             для вашего бизнеса
           </h1>
-          <button class="modal-btn">Заказать услугу</button>
+          <button data-modal-open class="modal-btn">Заказать услугу</button>
         </div>
       </section>
       <!--О Нас-->
@@ -567,9 +567,10 @@
       </div>
     </footer>
     <!--Модальное окно-->
-    <div class="form-on-backdrop">
+    <div data-modal class="form-on-backdrop is-hidden">
       <form action="#" class="modal-form">
         <h3 class="modal-form-name">Оставьте свои данные, мы вам перезвоним</h3>
+        <button data-modal-close class="modal-close-btn"></button>
         <div class="modal-wrapper">
           <input
             class="modal-form-title"
@@ -578,7 +579,12 @@
             id="user-modal-name"
             placeholder=" "
           />
-          <label for="user-modal-name" class="modal-label">Имя</label>
+          <label for="user-modal-name" class="modal-label"> Имя</label>
+          <span class="icon-form-span">
+            <svg class="icon-form">
+              <use href="./images/sprite.svg#icon-person"></use>
+            </svg>
+          </span>
         </div>
         <div class="modal-wrapper">
           <input
@@ -589,6 +595,11 @@
             placeholder=" "
           />
           <label for="user-modal-tel" class="modal-label">Телефон</label>
+          <span class="icon-form-span">
+            <svg class="icon-form">
+              <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+          </span>
         </div>
         <div class="modal-wrapper">
           <input
@@ -599,6 +610,11 @@
             placeholder=" "
           />
           <label for="user-modal-email" class="modal-label">Почта</label>
+          <span class="icon-form-span">
+            <svg class="icon-form">
+              <use href="./images/sprite.svg#icon-email"></use>
+            </svg>
+          </span>
         </div>
         <textarea
           class="modal-form-text"
@@ -613,7 +629,11 @@
             value="accept-policy"
             class="modal-form-check"
           />
-          <span class="modal-form-my-check"></span>
+          <span class="modal-form-my-check">
+            <svg class="icon-check">
+              <use href="./images/sprite.svg#icon-icon-check"></use>
+            </svg>
+          </span>
           <span class="modal-form-span"
             >Соглашаюсь с рассылкой и принимаю
             <a href="">Условия договора</a>
@@ -622,5 +642,7 @@
         <button class="modal-form-accept">Отправить</button>
       </form>
     </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
