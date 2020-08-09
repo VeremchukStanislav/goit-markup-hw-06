@@ -745,8 +745,12 @@ p {
   background-color: var(--background-color);
   align-items: center;
 }
-.modal-form-text {
+.modal-label-textarea {
+  position: relative;
   margin-bottom: 20px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-text {
   padding-top: 12px;
   padding-right: 16px;
   padding-bottom: 12px;
@@ -754,7 +758,19 @@ p {
   width: 448px;
   height: 120px;
   resize: none;
-  color: var(--main-color-text);
+}
+.modal-span-text {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  color: var(--main-color-text); /*
+  transform: translateY(0%, -50%);*/
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-label-textarea:focus-within > .modal-span-text,
+.modal-form-text:not(:placeholder-shown) + .modal-span-text {
+  transform: translate(-10px, -35px);
+  color: var(--accent-color);
 }
 .modal-wrapper {
   position: relative;
@@ -797,6 +813,9 @@ p {
   color: var(--main-color-text);
 }
 .modal-form-name {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   margin-bottom: 30px;
 }
 .modal-form-title:focus + .modal-label,
