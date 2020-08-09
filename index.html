@@ -552,7 +552,7 @@
             <input
               type="email"
               name="email"
-              id=""
+              id="email"
               class="mail-form-input"
               placeholder="E-mail"
             />
@@ -597,8 +597,11 @@
             name="user-tel"
             id="user-modal-tel"
             placeholder=" "
+            required=" "
           />
-          <label for="user-modal-tel" class="modal-label">Телефон</label>
+          <label for="user-modal-tel" class="modal-label">
+            Телефон
+          </label>
           <span class="icon-form-span">
             <svg class="icon-form">
               <use href="./images/sprite.svg#icon-phone"></use>
@@ -612,8 +615,16 @@
             name="user-email"
             id="user-modal-email"
             placeholder=" "
+            required=" "
           />
-          <label for="user-modal-email" class="modal-label">Почта</label>
+          <label
+            type="email"
+            name="email"
+            id="email"
+            for="user-modal-email"
+            class="modal-label"
+            >Почта</label
+          >
           <span class="icon-form-span">
             <svg class="icon-form">
               <use href="./images/sprite.svg#icon-email"></use>
